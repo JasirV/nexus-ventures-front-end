@@ -3,6 +3,9 @@ import Home from "./pages/clinet/home";
 import RootLayout from "./layout/rootLayout";
 import Login from "./pages/clinet/login";
 import PaymentGateway from "./pages/clinet/paymentGateway";
+import Singup from "./pages/clinet/singup";
+import VideoPage from "./pages/clinet/videoPage";
+import LoginLayout from "./layout/loginLaout";
 
 export const router = createBrowserRouter([
     {
@@ -12,6 +15,16 @@ export const router = createBrowserRouter([
         {
           index: true,
           element: <Home />,
+        },
+      ],
+    },
+    {
+      path: "/singup",
+      element: <RootLayout />,
+      children: [
+        {
+          index: true,
+          element: <Singup />,
         },
       ],
     },
@@ -26,12 +39,12 @@ export const router = createBrowserRouter([
       ],
     },
     {
-      path: "/payment",
-      element: <RootLayout />,
+      path: "/video",
+      element: <LoginLayout />,
       children: [
         {
           index: true,
-          element: <PaymentGateway />,
+          element: <VideoPage />,
         },
       ],
     },
