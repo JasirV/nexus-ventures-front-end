@@ -100,8 +100,8 @@ const Invoice = () => {
 
         </div>
         
-        <div className="overflow-scroll  rounded-lg shadow-lg mt-5">
-          <table className="min-w-full bg-gray-200  overflow-scroll">
+        <div className="overflow-y-auto  rounded-lg shadow-lg mt-5">
+          <table className="min-w-full bg-gray-200  overflow-y-auto">
             <thead>
               <tr className=" text-black">
                 <th className="py-3 px-4 text-left border-b">Name</th>

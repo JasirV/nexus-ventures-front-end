@@ -6,6 +6,7 @@ import BusinessPartners from '../../components/businessPartners';
 import BusinessPromoters from '../../components/businessPromoters';
 import NewRequests from '../../components/newRequests';
 import Invoice from '../../components/invoice';
+import Renewal from '../../components/renewal';
 const AdminDashborde = () => {
     const [item,setItem]=useState("dashboard")
 
@@ -52,7 +53,7 @@ const AdminDashborde = () => {
       {item==="business-promoters"&&<BusinessPromoters/>}
       {item==="new-requests"&&<NewRequests/>}
       {item==="invoice"&&<Invoice/>}
-      {item==="renewal"&&<p>renewal</p>}
+      {item==="renewal"&&<Renewal/>}
 
     </div>
   )
