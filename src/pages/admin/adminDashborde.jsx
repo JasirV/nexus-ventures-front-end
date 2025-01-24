@@ -7,6 +7,7 @@ import BusinessPromoters from '../../components/businessPromoters';
 import NewRequests from '../../components/newRequests';
 import Invoice from '../../components/invoice';
 import Renewal from '../../components/renewal';
+import { Link } from 'react-router-dom';
 const AdminDashborde = () => {
     const [item,setItem]=useState("dashboard")
 
@@ -41,7 +42,9 @@ const AdminDashborde = () => {
             <li className={`px-6 py-3 hover:bg-white hover:text-primary font-bold text-lg ${item===""?'bg-white text-primary':'bg-none text-white'}`} onClick={()=>{onchange('renewal')}}>Renewal</li>
             </div>
             <div className='border-t  pt-1 pb-1'>
+              <Link to='/'>
             <li className="px-6 py-3 flex hover:bg-white hover:text-primary font-bold text-lg text-white gap-2"><IoIosLogOut size={30} />Logout</li>
+              </Link>
             </div>
           </ul>
         </nav>
