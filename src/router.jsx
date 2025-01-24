@@ -7,6 +7,7 @@ import Singup from "./pages/clinet/singup";
 import VideoPage from "./pages/clinet/videoPage";
 import LoginLayout from "./layout/loginLaout";
 import AdminDashborde from "./pages/admin/adminDashborde";
+import UserDashbord from "./pages/user/userDashbord";
 
 export const router = createBrowserRouter([
     {
@@ -50,11 +51,20 @@ export const router = createBrowserRouter([
       ],
     },
     {
-      path: "/admindash",
+      path: "/userdash",
       children: [
         {
           index: true,
           element: <AdminDashborde />,
+        },
+      ],
+    },
+    {
+      path: "/admindash",
+      children: [
+        {
+          index: true,
+          element: <UserDashbord />,
         },
       ],
     },

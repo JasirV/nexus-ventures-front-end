@@ -57,7 +57,7 @@ const Login = () => {
             <button
               type="submit"
               className="  py-2 font-normal px-10  bg-white "
-              onClick={()=>{naviagete("/admindash")}}
+              onClick={()=>{naviagete("/userdash")}}
             >
               Login
             </button>
