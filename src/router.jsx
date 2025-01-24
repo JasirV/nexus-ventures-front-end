@@ -6,6 +6,7 @@ import PaymentGateway from "./pages/clinet/paymentGateway";
 import Singup from "./pages/clinet/singup";
 import VideoPage from "./pages/clinet/videoPage";
 import LoginLayout from "./layout/loginLaout";
+import AdminDashborde from "./pages/admin/adminDashborde";
 
 export const router = createBrowserRouter([
     {
@@ -45,6 +46,15 @@ export const router = createBrowserRouter([
         {
           index: true,
           element: <VideoPage />,
+        },
+      ],
+    },
+    {
+      path: "/admindash",
+      children: [
+        {
+          index: true,
+          element: <AdminDashborde />,
         },
       ],
     },
