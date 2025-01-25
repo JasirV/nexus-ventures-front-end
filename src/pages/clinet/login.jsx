@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LoginBg from '../../assets/loginBg.png'
 import { FaEnvelope, FaEye } from 'react-icons/fa';
 import { useNavigate } from 'react-router';
 const Login = () => {
   const naviagete=useNavigate()
+  const [value,setValue]=useState('')
+  const handleSubmit=()=>{
+    if(value){
+      naviagete('/admindash')
+    }else{
+      naviagete("/userdash")
+    }
+  }
   return (
     <div className=' p-20 '>
         {/* leftsection */}
@@ -57,7 +65,7 @@ const Login = () => {
             <button
               type="submit"
               className="  py-2 font-normal px-10  bg-white "
-              onClick={()=>{naviagete("/userdash")}}
+              onClick={handleSubmit}
             >
               Login
             </button>
